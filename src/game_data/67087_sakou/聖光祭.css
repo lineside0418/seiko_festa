@@ -1,0 +1,20 @@
+canvas{
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+#canvas{
+    text-align: center;
+    border: 0.1px solid;
+    display: block;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+
+html,body{
+    text-align: center;
+    display: block;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
