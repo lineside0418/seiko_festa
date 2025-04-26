@@ -87,13 +87,24 @@
             </div>
         </main>
         <script>
-            const ua = navigator.userAgent;
-            if (ua.includes("iPad")) {
-                const game4 = document.querySelector('a[href="../src/game_data/65064_katsumata/index.html"]');
-                if (game4) {
-                game4.href = "../src/game_data/65064_katsumata/mobile/index.html";
-            }
-            }
+            window.addEventListener('load', function () {
+                const ua = navigator.userAgent;
+                const targetImg = document.querySelector('img[src="../src/game_data/logos/original_game_icon.png"]');
+                const game4Link = document.querySelector('a[href="../src/game_data/65064_katsumata/index.html"]');
+        
+                if (targetImg && game4Link) {
+                    if (ua.includes("Safari") && !ua.includes("Chrome") && !ua.includes("CriOS")) {
+                        // Safariのみ（ChromeやCriOSが入ってない純粋なSafari）
+                        targetImg.src = "../src/game_data/logos/original_game_logo_cant_play.png";
+                        game4Link.href = "../html/menu.html";
+                    } else if (ua.includes("Chrome") || ua.includes("CriOS")) {
+                        // Chrome（PCやChromebookのChrome、iOSのChromeも含む）
+                        targetImg.src = "../src/game_data/logos/original_game_icon_chrome.png";
+                        game4Link.href = "../src/game_data/65064_katsumata/chrome/index.html";
+                    }
+                    // その他（FirefoxやEdgeなど）は何もしない
+                }
+            });
         </script>
     </body>
 </html>
