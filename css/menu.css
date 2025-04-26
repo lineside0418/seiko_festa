@@ -2,8 +2,12 @@
 @font-face {
     font-family: "d-din";
     src: url("../src/fonts/D-DINExp-Bold.otf");
+}
+@font-face {
     font-family: "inter";
     src: url("../src/fonts/inter.ttf");
+}
+@font-face {
     font-family: "ShipporiGothic";
     src: url("../src/fonts/ShipporiGothicB2-OTF-Bold.otf");
 }
