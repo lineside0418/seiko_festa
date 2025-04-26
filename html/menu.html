@@ -86,5 +86,14 @@
                 </a>
             </div>
         </main>
+        <script>
+            const ua = navigator.userAgent;
+            if (ua.includes("iPad")) {
+                const game4 = document.querySelector('a[href="../src/game_data/65064_katsumata/index.html"]');
+                if (game4) {
+                game4.href = "../src/game_data/65064_katsumata/mobile/index.html";
+            }
+            }
+        </script>
     </body>
 </html>
